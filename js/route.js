@@ -7,8 +7,8 @@ var module = angular.module("MoboCafe", ['ngRoute']);
                     //controller: 'RouteController'
                 }).
                 when('/menu', {
-                    templateUrl: 'partials/menu.html'
-                   // controller: 'RouteController'
+                    templateUrl: 'partials/menu.html',
+                    controller: 'menuController'
                 }).
                 otherwise({
                     redirectTo: '/HomePage'

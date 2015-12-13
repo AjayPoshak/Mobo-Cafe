@@ -1,0 +1,55 @@
+{
+    "status": "SUCCESS",
+    "exceptionMessage": null,
+    "itemList": [
+        {
+            "vendorId": "1",
+            "shopName": "tuckshop",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "10",
+            "remarks": ""
+        },
+        {
+            "vendorId": "1",
+            "shopName": "tuckshop",
+            "type": "Parathas",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "10",
+            "remarks": ""
+        },
+        {
+            "vendorId": "2",
+            "shopName": "tuckshop",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "10",
+            "remarks": ""
+        },
+        {
+            "vendorId": "2",
+            "shopName": "meals",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "10",
+            "remarks": ""
+        },
+        {
+            "vendorId": "3",
+            "shopName": "meals",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "10",
+            "remarks": ""
+        },
+        {
+            "vendorId": "3",
+            "shopName": "snacks",
+            "itemName": "Aloo",
+            "price": "50",
+            "quantity": "1",
+            "remarks": ""
+        }
+    ]
+}
