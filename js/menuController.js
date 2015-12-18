@@ -1,12 +1,13 @@
 'use strict';
 angular.module("MoboCafe")
 	.controller("menuController",menuController);
-	
+
 function menuController($scope, $rootScope,$http) {
 	console.log("InsideMenu Controller...");
 	$scope.menuData = null;
 	$scope.items = [];
 	$scope.checkbox = false;
+	$scope.total = 0; //Grand Total Price
 	function getMenuDetails() {
 		$http.get('json/menu.json')
 			.then(function(response) {
@@ -21,7 +22,6 @@ function menuController($scope, $rootScope,$http) {
 	}
 	$scope.checkboxSelectionEvent = function(item)
 	{
-		
 		console.log($scope.checkbox);
 		if(item.checkbox) {
 			console.log("Value selected...");
@@ -37,15 +37,16 @@ function menuController($scope, $rootScope,$http) {
 					loc = itr;
 				}
 			}
-			console.log("Loc::"+loc);
+			console.log("Loc::"+loc+"Length::"+$scope.items.length);
 			//Deleting the unchecked item from list.
 			for(itr=loc; itr<$scope.items.length-1; itr++){
 				$scope.items[itr] = $scope.items[itr+1];
 			}
-			
+			$scope.items.length = $scope.items.length-1;
 
 		}
-		printItems();
+		countTotal();
+		//printItems();
 	};
 	function printItems() {
 		var itr = 0;
@@ -56,6 +57,29 @@ function menuController($scope, $rootScope,$http) {
 		}
 
 	}
+	function countTotal() {
+		var itr = 0;
+		var total = 0;
+		for(itr=0; itr< $scope.items.length; itr++){
+			console.log("Q::"+$scope.items[itr].quantity+" P::"+$scope.items[itr].price);
+			total = total + ($scope.items[itr].quantity * $scope.items[itr].price);
+		};
+		$scope.total = total;
+		console.log("+++Total::"+$scope.total);
+	};
+	$scope.updateQuantity = function(param){
+		//Finding the location of item whose quantity should be updated.
+		var itr = 0;
+		var loc = 0;
+		for(itr=0; itr<$scope.items.length; itr++){
+			if(param.itemId == $scope.items[itr].itemId) {
+				loc = itr;
+			}
+		}
+		console.log("Quality updated::"+ param.quantity);
+		$scope.items[loc].quantity = param.quantity;
+		countTotal();
+	};
 	function startApplication() {
 		console.log("Starting application...");
 		getMenuDetails();
