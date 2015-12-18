@@ -8,6 +8,7 @@ function menuController($scope, $rootScope,$http) {
 	$scope.items = [];
 	$scope.checkbox = false;
 	$scope.total = 0; //Grand Total Price
+	$scope.isDisabled = true; //To disable the checkout button until total is greater than zero.
 	function getMenuDetails() {
 		$http.get('json/menu.json')
 			.then(function(response) {
@@ -66,6 +67,13 @@ function menuController($scope, $rootScope,$http) {
 		};
 		$scope.total = total;
 		console.log("+++Total::"+$scope.total);
+		if($scope.total > 0){
+			$scope.isDisabled = false;
+			console.log("Button Enabled");
+		}
+		else {
+			$scope.isDisabled = true;
+		}
 	};
 	$scope.updateQuantity = function(param){
 		//Finding the location of item whose quantity should be updated.
@@ -75,11 +83,21 @@ function menuController($scope, $rootScope,$http) {
 			if(param.itemId == $scope.items[itr].itemId) {
 				loc = itr;
 			}
+			if($scope.total > 0){
+				$scope.isDisabled = false;
+			}
+			else {
+				$scope.isDisabled = true;
+			}
 		}
 		console.log("Quality updated::"+ param.quantity);
 		$scope.items[loc].quantity = param.quantity;
 		countTotal();
 	};
+	$scope.checkoutOrder = function() {
+		console.log("Checking out the order...");
+		printItems();
+	}
 	function startApplication() {
 		console.log("Starting application...");
 		getMenuDetails();

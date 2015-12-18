@@ -88,9 +88,12 @@
                                                     <td>{{checkout.price}}</td>
                                                     <td ng-model="checkout.totalPrice">{{checkout.price * checkout.quantity}}</td>
                                                 </tr>
-
+                                                <tr><td>Total Price</td><td>{{total}}</td></tr>
+                                                <tr>
+                                                  <td><button class="btn btn-primary" ng-click="checkoutOrder()" ng-disabled="isDisabled">Checkout</button></td>
+                                                </tr>
                                             </tbody>
-                                            <tr><td>Total Price</td><td>{{total}}</td></tr>
+
                                         </table>
                                     </div>
                 </div>
