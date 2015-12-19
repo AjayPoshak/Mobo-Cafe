@@ -1,0 +1,58 @@
+
+   <mobo-header></mobo-header>
+  <style>
+  td,th
+  {
+    text-align:center !important; 
+    vertical-align:middle;
+	}
+  </style>
+  
+  <div class="container box">
+			<div class="hero-unit">
+				<div class="pull-right">
+					<div class="fb-like" data-href="https://facebook.com/mindmupapp" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div><br/>
+				</div>
+			
+				<h1 class="text-center" style="color:black">Order Details<br/> <small style="color:black">Shop Name | TUCKSHOP</small><br/></h1>
+
+			<hr/>
+			<div class="container">
+  
+  <ul class="nav nav-tabs">
+    <li class="active" ><a style="padding:10px;background-color:white;color:black" href="#/orderDetail">Order Details</a></li>
+    <li class="active"><a style="padding:10px;background-color:white;color:black" href="#/vendor">Vendor</a></li>
+
+  </ul>
+			<div class="table-responsive">
+			<table id="mainTable" style="border:1 px solid black;color:black" class="table table-striped">
+				<tr><th>Item ID</th><th>Item Name</th><th>Item Cost</th><th>Quantity</th>
+				<tr ng-repeat="order in orderData">
+					<td>  <input type="text" class="form-control" ng-model="order.itemId" ng-change="changeEntry(order, $index)" value="{{order.itemId}}"></td>
+					<td>  <input type="text" class="form-control" ng-model="order.itemName" ng-change="changeEntry(order, $index)" value="{{order.itemName}}"></td>
+					 <td>  <input type="text" class="form-control" ng-model="order.quantity" ng-change="changeEntry(order, $index)" value="{{order.quantity}}"></td>
+					<td>  <input type="text" class="form-control" ng-model="order.cost" ng-change="changeEntry(order, $index)" value="{{order.cost}}"></td>
+					<td><button type="button" class="glyphicon glyphicon-minus-sign"  ng-click="removeRowEvent($index)"  ng-disabled="loading"><i class="fa fa-minus-circle"></i></button></td>
+				</tr>
+			</table>
+			 </div>
+			  
+				
+			</div>
+  
+				<div class="row col-lg-12">
+				<div style="padding-bottom:10px;" class="col-lg-1"><button id="addRow" type="button" style="background-color:black; color:white;width:150px;margin-right:150px" class="btn btn-default" ng-click="addRowEvent();">Add Row</button></div>
+				<div style="padding-bottom:10px;" class="col-lg-1"><button style="align:right; background-color:green !important; color:white;width:150px;margin-left:50px" id="save" type="button" class="btn btn-default" ng-click="saveDataEvent();">Save</button></div>
+				</div>
+				
+			</div>
+</div>
+
+</div>
+
+</div>
+
+
+      
+
+<mobo-footer></mobo-footer> 

@@ -1,52 +1,163 @@
+<mobo-header></mobo-header>
+   <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!-- button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button -->
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="#/login">Mobo Cafe</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+		
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+		<div class="text-center row">
+	   
+            <p style="padding:5px;" class="box">Welcome Ashvarya</p>     
+            
+			 </div>
+<div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/slide-2.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive img-full" src="img/slide-3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <h2 class="brand-before textB">
+                        <small class="textB">Welcome to</small>
+                    </h2>
+                    <h1 class="brand-name">MOBO CAFE</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        
+                           <small> <strong class="textB">Cafe At Your Service</strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong style="color:brown">Welcome to the Tuck Shop</strong>
-
+                    <h2 class="intro-text text-center textB"><strong>Welcome to TuckShop</strong>
                     </h2>
                     <hr>
-                    <div class="col-lg-12">
+					<div class="col-lg-12">
+                    <img class="img-responsive img-border " src="img/Tuckshop.jpg" alt="">
+					</div>
+                    <hr class="visible-xs">
+                     <div class="col-lg-12">
                          <div  class="col-lg-4" id="Parathas" >
                                     <h4>Paratha Gully</h4>
-                                    <ul>
-                                        <li class="checkbox checkbox-success" ng-repeat="item in menuData.itemList" ng-if="item.shopName == 'tuckshop'">
+                                    <ul style="text-align:left !important">
+                                        <li class="checkbox checkbox-success" ng-repeat="item in menuData" ng-if="item.shopName == 'TuckShop'">
                                             <input type="checkbox" id={{item.itemId}} ng-model="item.checkbox" ng-change="checkboxSelectionEvent(item)" ng-value="item.itemId">
                                                 <label for="{{item.itemId}}">{{item.itemName}} | {{item.price}}|{{item.itemId}}</label>
                                         </li>
                                     </ul>
                         </div>
+						
                     </div>
-                    </div>
-                    <div class="box">
-                        <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center"><strong style="color:brown">Welcome to the Snacks Bar</strong>
+					
+                </div>
+            </div>
+        </div>
 
+               <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center textB"><strong>Welcome to JuiceShop</strong>
                     </h2>
                     <hr>
-                    <div class="col-lg-12">
+                    <img class="img-responsive img-border " src="img/juice.jpg" alt="">
+                    <hr class="visible-xs">
+                       <div class="col-lg-12">
 
 
-                                    <div  class="col-lg-4" id="Parathas" >
-                                    <h4>Paratha Gully</h4>
-                                    <ul>
-                                        <li class="checkbox checkbox-success" ng-repeat="item in menuData.itemList" ng-if="item.shopName == 'snacks'">
+                                    <div  class="col-lg-4" id="juice" >
+                                    <h4>Juices</h4>
+                                    <ul style="text-align:left !important">
+                                        <li class="checkbox checkbox-success" ng-repeat="item in menuData" ng-if="item.shopName == 'JuiceShop'">
                                             <input type="checkbox" id={{item.itemId}} ng-model="item.checkbox" ng-change="checkboxSelectionEvent(item)" ng-value="item.itemId">
                                                 <label for="{{item.itemId}}">{{item.itemName}} | {{item.price}} | {{item.itemId}}</label>
                                         </li>
                                     </ul>
                           </div>
                         </div>
-                    </div>
-                    <div class="box">
-                        <div class="col-lg-12">
+                </div>
+            </div>
+        </div>        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center"><strong style="color:brown">Welcome to the Cafe Coffee Day</strong>
-
+                    <h2 class="intro-text text-center textB"><strong>Welcome to CCD</strong>
                     </h2>
                     <hr>
-                    <div class="col-lg-12">
+                    <img class="img-responsive img-border " src="img/CafeCoffeeDay.jpg" alt="">
+                    <hr class="visible-xs">
+                         <div class="col-lg-12">
+
+
+                                    <div  class="col-lg-4" id="ccd" >
+                                    <h4>Caffine Special</h4>
+                                    <ul style="text-align:left !important">
+                                        <li class="checkbox checkbox-success" ng-repeat="item in menuData" ng-if="item.shopName == 'Bikano'">
+                                            <input type="checkbox" id={{item.itemId}} ng-model="item.checkbox" ng-change="checkboxSelectionEvent(item)" ng-value="item.itemId">
+                                                <label for="{{item.itemId}}">{{item.itemName}} | {{item.price}} | {{item.itemId}}</label>
+                                        </li>
+                                    </ul>
+
+                        </div>
+                    </div>	
+                </div>
+            </div>
+        </div>
+		
+		        <!--div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center textB"><strong>Welcome to Meal's Center</strong>
+                    </h2>
+                    <hr>
+                    <img class="img-responsive img-border" src="img/meal.jpg" alt="">
+                    <hr class="visible-xs">
+                         <div class="col-lg-12">
 
 
                                     <div  class="col-lg-4" id="Parathas" >
@@ -60,12 +171,11 @@
 
                         </div>
                     </div>
-
                 </div>
-
-                </div>
-                <div>
-                    <h1 style="color:white;float:left">Proceed To Check Out</h1>
+            </div>
+        </div-->
+		 <div>
+                    <h1 style="color:white;float:left;font-weight:700" class="dTop150">Proceed To Check Out</h1>
                 </div>
 
                 <div style="float:right" class="box col-lg-4" >
@@ -84,13 +194,24 @@
                                             <tbody>
                                                 <tr ng-repeat="checkout in items">
                                                     <td>{{checkout.itemName}}</td>
-                                                    <td><input type="text" min="1" style="width:50px" ng-model="checkout.quantity" value="1" ng-change="updateQuantity(checkout)"></td>
+                                                    <td><select min="1" style="width:60px" ng-model="checkout.quantity"  ng-change="updateQuantity(checkout)">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+														</select></td>
                                                     <td>{{checkout.price}}</td>
                                                     <td ng-model="checkout.totalPrice">{{checkout.price * checkout.quantity}}</td>
                                                 </tr>
                                                 <tr><td>Total Price</td><td>{{total}}</td></tr>
                                                 <tr>
-                                                  <td><button class="btn btn-primary" ng-click="checkoutOrder()" ng-disabled="isDisabled">Checkout</button></td>
+                                                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-modal-id="modal-register" ng-click="checkoutOrder()" ng-disabled="isDisabled">Checkout</button></td>
                                                 </tr>
                                             </tbody>
 
@@ -98,8 +219,42 @@
                                     </div>
                 </div>
 
-
+				 <!-- MODAL -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        				</button>
+        				<h3 style="color:lightgrey" class="modal-title" id="modal-register-label">Pay Now</h3>
+        				<p style="color:lightgrey">Enter details to complete checkout:</p>
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="registration-form">
+	                    	
+	                       
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="form-email">Email</label>
+	                        	<input ng-model="email" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" type="text">
+	                        </div>
+							 <div class="form-group">
+	                        	<label class="sr-only" for="form-last-name">Mobomoney Id</label>
+	                        	<input ng-model="moboId" name="form-last-name" placeholder="Mobomoney Id" class="form-last-name form-control" id="form-last-name" type="text">
+	                        </div>
+	                        
+	                        <button type="submit" class="btn btn-disable"  ng-click="paymentEvent()"><a style="color:white" ng-disabled="isPayDisabled" href="#/paymentSuccess">PAY!</a></button>
+	                    </form>
+	                    
+        			</div>
+        			
+        		</div>
+        	</div>
+        </div>
+		
 
                 <div class="clearfix"></div>
-            </div>
-        </div>
+<mobo-footer></mobo-footer>
